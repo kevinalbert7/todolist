@@ -1,23 +1,30 @@
 /* Titre Site */
 
 header {
-    display: flex
+    display: flex;
+    justify-content: space-around;
+}
+
+header .titreSite {
+    display: flex;
+    flex-direction: column;
+	align-items: center;
+    justify-content: center;   
+    border: #213A6C solid 2px;
 }
 
 header h1 {
     font-family: Amatic SC;
     font-style: normal;
     font-weight: bold;
-    font-size: 144px;
-    line-height: 182px;
+    font-size: 60px;
     text-align: center;
     
-    color: #213A6C;   
+    color: #213A6C;  
 }
 
 header .logoSite {
-    width: 168px;
-    color: #213A6C; 
+    width: 60px;
 }
 
 /* Formulaire */
