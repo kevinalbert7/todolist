@@ -1,3 +1,25 @@
+/* Titre Site */
+
+header {
+    display: flex
+}
+
+header h1 {
+    font-family: Amatic SC;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 144px;
+    line-height: 182px;
+    text-align: center;
+    
+    color: #213A6C;   
+}
+
+header .logoSite {
+    width: 168px;
+    color: #213A6C; 
+}
+
 /* Formulaire */
 
 form.addTask {
