@@ -6,10 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="style.css">
+    <!------------- Fonts --------------->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&display=swap" rel="stylesheet">
-    <title>Enjoy your day with My To Do List</title>
+    <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <!------------- Title--------------->
+    <title>My To Do List</title>
 </head>
 
 <body>
@@ -28,8 +30,9 @@
         <!-------------------- Formulaire entrée  ------------------->
         <div class="addTask">
             <form onsubmit="onTaskSubmit(); return false;">
-                    <label for="name" id="newTask">Nouvelle tâche</label>
-                    <input class="addTaskText" type="text" name="name" id="name" required>
+                    <img class="logoForm" src="img/logo_pencil.svg">
+                    <label for="name" id="newTask">Ajouter une nouvelle tâche</label>
+                    <input class="addTaskText" type="text" name="name" id="name" required placeholder="Ne pas oublier de ...">
                     <input class="addTaskButton" type="submit" value="Ajouter">   
             </form>
         </div>
@@ -171,7 +174,20 @@
 
     <!------------- Barre latérale --------------->
         <div class="sideBar">
-            <div class="taskFilter">    
+            <div class="taskFilter">
+                <h4>Filter</h4>
+                <div class="todoFilter">
+                    <input id="addTodo" type="checkbox" value="To Do">
+                    <label for="addTodo">TO DO</label>
+                </div>
+                <div class="doingFilter">
+                    <input id="addDoing" type="checkbox" value="Doing">
+                    <label for="addDoing">DOING</label>
+                </div>
+                <div class="doneFilter">
+                    <input id="addDone" type="checkbox" value="Done">
+                    <label for="addDone">DONE</label>
+                </div>
             </div> 
             <img class="randomButton" src="img/logo_sleep.png">  
         </div>   
