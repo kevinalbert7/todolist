@@ -1,3 +1,13 @@
+/* Header */
+
+header{
+    height: 400px;
+}
+
+.logoSite{
+    width: 60px;
+}
+
 /* Formulaire */
 
 form.addTask {
@@ -15,4 +25,12 @@ label, input {
 
 label {
     padding-right: 10px;
+}
+
+/* Liste des tâches */
+
+.task_bloc{
+    height: 800px;
+    display: flex;
+    flex-direction: column;
 }
