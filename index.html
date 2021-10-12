@@ -15,23 +15,32 @@
 <body>
 
 <!------------- Header --------------->
-        <div class="container">
+    
+    
+<div class="container">
     <header>
+
             <div class="titreSite">
                 <img class="logoSite" src="img/logo_plan.svg">
                 <h1>My To Do List</h1>
             </div>
 
         <!-------------------- Formulaire entrée  ------------------->
+        <div class="addTask">
             <form onsubmit="onTaskSubmit(); return false;">
-                <div class="Ajout">
                     <label for="name" id="newTask">Nouvelle tâche</label>
-                    <input type="text" name="name" id="name" required>
-                    <input type="submit" value="Ajouter">
-                </div>
+                    <input class="addTaskText" type="text" name="name" id="name" required>
+                    <input class="addTaskButton" type="submit" value="Ajouter">   
             </form>
-        
-        <!-------------------- Liste des tâches ------------------->
+        </div>
+
+    </header>
+</div>
+
+<!------------- Section principale --------------->
+<div class="container"> 
+    <section class="mainSection">
+            <!-------------------- Liste des tâches ------------------->
 
         <div class="task_bloc">
             <div class="list toDo first_task">
@@ -158,18 +167,6 @@
                     </button>
                 </div>
             </div>
-        
-            <div>
-            <p id="tâches">lorem</p>
-            </div>
-    </header>
-</div> 
-
-<!------------- Section principale --------------->
-    <section>
-        <div class="container">
-
-      
 
     <!------------- Barre latérale --------------->
             <div class="sideBar">
@@ -179,8 +176,9 @@
                     <img src="img/logo_sleep.png">  
                 </div>
             </div>
-        </div>
+  
     </section>
+</div>
 
 <script src="index.js"></script>        
 </body>

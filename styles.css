@@ -40,24 +40,6 @@ header .logoSite {
     width: 20px;
 }
 
-/* Formulaire */
-
-form.addTask {
-    display: table;
-}
-
-div.form-example {
-    display: table-row;
-}
-
-label, input {
-    display: table-cell;
-    margin-bottom: 10px;
-}
-
-label {
-    padding-right: 10px;
-}
 
 
 /* Sidebar */
