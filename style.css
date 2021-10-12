@@ -1,12 +1,5 @@
 /* Header */
 
-header{
-    height: 400px;
-}
-
-.logoSite{
-    width: 60px;
-}
 
 /* Formulaire */
 
@@ -33,4 +26,5 @@ label {
     height: 800px;
     display: flex;
     flex-direction: column;
+    border: 5px solid grey;
 }

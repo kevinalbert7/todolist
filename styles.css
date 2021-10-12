@@ -1,0 +1,47 @@
+/* Titre Site */
+
+header {
+    display: flex;
+    justify-content: space-around;
+}
+
+header .titreSite {
+    display: flex;
+    flex-direction: column;
+	align-items: center;
+    justify-content: center;   
+    border: #213A6C solid 2px;
+}
+
+header h1 {
+    font-family: Amatic SC;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 60px;
+    text-align: center;
+    
+    color: #213A6C;  
+}
+
+header .logoSite {
+    width: 60px;
+}
+
+/* Formulaire */
+
+form.addTask {
+    display: table;
+}
+
+div.form-example {
+    display: table-row;
+}
+
+label, input {
+    display: table-cell;
+    margin-bottom: 10px;
+}
+
+label {
+    padding-right: 10px;
+}
