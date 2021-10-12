@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="styles.css">
-    <title>Enjoy Your Day </title>
+    <title>Enjoy your day with My To Do List</title>
 </head>
 
 <body>
@@ -14,18 +14,19 @@
 <!------------- Header --------------->
 
     <header>
-        <div>
-            <h1>Ajout de Tâches</h1>
+        <div class="titreSite">
+            <img class="logoSite" src="img/logo_plan.svg">
+            <h1>My To Do List</h1>
         </div>
 
-    
-        <form onsubmit="onTaskSubmit(); return false;">
+        <form class="formTaskSubmit" onsubmit="onTaskSubmit(); return false;">
             <div class="Ajout">
                 <label for="name" id="newTask">Nouvelle tâche</label>
                 <input type="text" name="name" id="name" required>
                 <input type="submit" value="Ajouter">
             </div>
         </form>
+        
         
         <di></div>
         <p id="tâches">lorem</p>
