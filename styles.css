@@ -3,12 +3,19 @@ body {
     background-color: #D2DEF1;;
 }
 
+.container {
+    max-width: 1024px;
+    width: 100%;
+    margin: 0 auto;   
+}
+
 
 /* Titre Site */
 
 header {
     display: flex;
     justify-content: space-around;
+    border: #213A6C solid 2px;
 }
 
 header .titreSite {
@@ -50,4 +57,16 @@ label, input {
 
 label {
     padding-right: 10px;
+}
+
+
+/* Sidebar */
+
+.sideBar {
+    display: flex;
+    flex-direction: column;
+}
+
+.sideBar .randomButton {
+    width: 80px;
 }
