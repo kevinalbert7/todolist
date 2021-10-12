@@ -31,7 +31,7 @@ header h1 {
     font-family: Amatic SC;
     font-style: normal;
     font-weight: bold;
-    font-size: 60px;
+    font-size: 40px;
     text-align: center;
     
     color: #213A6C;  
@@ -77,6 +77,7 @@ label {
 
 .mainSection {
     display: flex;
+    flex-direction: row-reverse;
     justify-content: space-between;
     border: #213A6C solid 2px;
 }
@@ -237,5 +238,5 @@ label {
 }
 
 .sideBar .randomButton {
-    width: 20px;
+    width: 120px;
 }
