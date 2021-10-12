@@ -1,0 +1,30 @@
+/* Header */
+
+
+/* Formulaire */
+
+form.addTask {
+    display: table;
+}
+
+div.form-example {
+    display: table-row;
+}
+
+label, input {
+    display: table-cell;
+    margin-bottom: 10px;
+}
+
+label {
+    padding-right: 10px;
+}
+
+/* Liste des tâches */
+
+.task_bloc{
+    height: 800px;
+    display: flex;
+    flex-direction: column;
+    border: 5px solid grey;
+}

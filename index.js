@@ -1,12 +1,14 @@
 // ----------Fonction nouvelle tâche----------------
 
 var task = document.getElementById("name")
-// var taskArray = document.getAttribute("newTask")
 var taskHTML = document.getElementById("tâches")
+var taskArray = []
+
 
 function onTaskSubmit() {
-    // taskHTML.innerHTML = ""
+    taskHTML.innerHTML
     
     console.log(task.value)
 }
+
 
