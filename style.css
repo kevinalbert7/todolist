@@ -1,7 +1,15 @@
 /* Header */
 
+header{
+    height: 150px;
+    border: 5px solid grey;
+}
 
-/* Formulaire */
+.logoSite{
+    width: 80px;
+}
+
+    /* Formulaire */
 
 form.addTask {
     display: table;
@@ -19,12 +27,148 @@ label, input {
 label {
     padding-right: 10px;
 }
-
-/* Liste des tâches */
+/* Body */
+    
+    /* Liste des tâches */
 
 .task_bloc{
-    height: 800px;
+    height: 550px;
+    margin-left: 300px;
+    margin-right: 100px;
     display: flex;
     flex-direction: column;
-    border: 5px solid grey;
+    border: 5px solid #203A6C;
+    border-radius: 20px 20px 20px 20px;
+}
+
+.list{
+    display: flex;
+    flex-direction: row;
+    padding: 15px;
+    margin: 5px 250px 5px 30px;
+    border-radius: 20px 20px 20px 20px;
+}
+
+.toDo{
+    background-color: #E87479;
+}
+
+.doing{
+    background-color: #FFD977;
+}
+
+.done{
+    background-color: #9CC8CB;
+}
+
+    /* Menus */
+
+#menu-demo2, ul{
+    padding:0;
+    list-style:none;
+    text-align:center;
+}
+
+#menu-demo2 li{
+    display:inline-block;
+    position:relative;
+    border-radius: 10px 10px 0px 0px;
+}
+
+#menu-demo2 ul li{
+    display:inherit;
+    border-radius:0;
+}
+
+#menu-demo2 ul li:hover{
+    border-radius:0;
+}
+
+#menu-demo2 ul li:last-child{
+    border-radius: 0px 0px 10px 10px;
+}
+
+#menu-demo2 ul{
+    position:absolute;
+    z-index: 1000;
+    max-height:0;
+    left: 0;
+    right: 0;
+    overflow:hidden;
+    -moz-transition: .8s all .3s;
+    -webkit-transition: .8s all .3s;
+    transition: .8s all .3s;
+}
+
+#menu-demo2 li:hover ul{
+    max-height:15em;
+}
+
+    /* background des liens menus */
+
+#menu-demo2 li:last-child{
+    background-color: #CFFF6A;
+    background-image:-webkit-linear-gradient(top, #CFFF6A 0%, #677F35 100%);
+    background-image:linear-gradient(to bottom, #CFFF6A 0%, #677F35 100%);
+}
+
+    /* background des liens sous menus */
+    
+#menu-demo2 li:first-child li{
+    background: #E87479;
+}
+
+#menu-demo2 li:nth-child(2) li{
+    background:#333A40;
+}
+
+#menu-demo2 li:last-child li{
+    background:#677F35;
+}
+
+    /* background des liens menus et sous menus au survol */
+
+#menu-demo2 li:first-child:hover{
+    background:#E87479;
+}
+
+#menu-demo2 li:nth-child(2):hover{
+    background:#FFD977;
+}
+
+#menu-demo2 li:last-child:hover{
+    background:#9CC8CB;
+}
+
+    /* les a href */
+
+#menu-demo2 a{
+    text-decoration:none;
+    display:block;
+    padding:8px 32px;
+    color:#fff;
+    font-family:arial;
+}
+
+#menu-demo2 ul a{
+    padding:8px 0;
+}
+
+#menu-demo2 li:hover li a{
+    color:#fff;
+    text-transform:inherit;
+}
+
+    /* Boutons supprimer*/
+
+.button{
+    text-decoration:none;
+    display:block;
+    padding:7px 32px;
+    color:#fff;
+    background:#677F35;
+    border-radius: 10px 10px 0px 0px;
+    font-family:arial;
+    background-image:-webkit-linear-gradient(top, #CFFF6A 0%, #677F35 100%);
+    background-image:linear-gradient(to bottom, #CFFF6A 0%, #677F35 100%);
 }
