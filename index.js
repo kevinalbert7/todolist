@@ -1,8 +1,8 @@
-// ----------Fonction nouvelle tâche----------------
 
 var list = document.getElementById("list")
 var tasks = []
 
+// ----------Fonction nouvelle tâche----------------
 
 function onTaskSubmit() {
     var input = document.getElementById("name").value
@@ -16,8 +16,39 @@ function onTaskSubmit() {
 
 function editStatus(index) {
     tasks[index].status = "doing"
+    displayList()
+  }
+  
+  
+  function displayList() {
+    list.innerHTML = ``
+  
+    tasks.forEach(function(task, index) {
+      list.innerHTML = list.innerHTML + `
+        <li class="item">
+          <p>${task.value}</p>
+          <p>${task.status}</p>
+          <button onclick="edit(${index})">Modifier</button>
+          <button onclick="remove(${index})">X</button>
+        </li>
+      `
+    })
+  }
 
-        
+// -----------Fonction Remove -------------//
+
+function remove(index) {
+    tasks.splice(index, 1)
+    displayList()
+  }
+
+
+
+
+
+
+
+
 
     function displayList() {
         list.innerHTML = ""
@@ -62,13 +93,5 @@ function editStatus(index) {
         })
     }
 
-    function editValue() {
-
-    }
-
-    
 
 
-    function delete() {
-
-    }
