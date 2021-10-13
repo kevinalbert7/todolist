@@ -26,7 +26,7 @@ function onTaskSubmit() {
         
         <div class="modifyMenu">
             <ul id="menu-demo2">
-                <li><a href="#">Modifier</a>
+                <li><a href="#"><i class="arrow"></i></a>
                     <ul>
                         <li><a href="#">To do</a></li>
                         <li><a href="#">Doing</a></li>
@@ -34,6 +34,9 @@ function onTaskSubmit() {
                     </ul>
                 </li>
             </ul>
+            <div>
+                <a href="#"><i class="arrow"></i></a> 
+            </div>
         </div>
         
         <div>
