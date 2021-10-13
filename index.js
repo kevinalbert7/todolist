@@ -42,7 +42,7 @@ function editStatus(index) {
       
         <div class="modifyMenu">
         <div><a id="edit" href="#">Modifier</a></div>
-            <ul id="menu-demo2">
+            <ul id="fleche">
                 <li onclick="editStatus('Todo')">To do</li>
                 <li onclick="editStatus('Doing')">Doing</li>
                 <li onclick="editStatus('Done')">Done</li>
@@ -50,7 +50,7 @@ function editStatus(index) {
         </div>
       
         <div>
-            <button class="deleteButton">
+            <button onClick="deleteButton()">
             <p>Delete</p>
             </button>
         </div>
@@ -63,13 +63,10 @@ function editStatus(index) {
 
 // -----------Fonction Remove -------------//
 
-function remove(index) {
-    tasks.splice(index, 1)
+function deleteButton() {
+    tasks.splice([list.innerHTML], 1)
     displayList()
   }
-
-
-
 
 
 
