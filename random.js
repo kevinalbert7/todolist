@@ -1,0 +1,1 @@
+var randomArray=["Lire le dictionnaire en entier", "Trier par taille toutes les vis de la boîte à outils","Lancer un faux débat sur Twitter", "Supprimer les mails inutiles","Tester tous les stylos de la maison","" ]
