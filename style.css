@@ -93,11 +93,11 @@ header .addTask .addTaskText {
     margin-top: 8px;
   
     border-style: none;
-    padding-right: 10px;
+    padding-left: 10px;
     
     color: #878181;
     font-style: italic;
-    text-align: right;
+    text-align: left;
     
 }
 
@@ -107,7 +107,7 @@ header .addTask .addTaskButton {
     margin-top: 10px;
     background: #213A6C;
     color: white;
-    box-shadow: 0px 4px 4px rgba(255, 255, 255, 0.678);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-style: none;
     border-radius: 4px;
 }
@@ -154,7 +154,7 @@ label {
 }
 
 .list{
-    width: 300px;
+    width: 400px;
     border-bottom: #213A6C solid 1px;
     padding: 5px 5px;
     margin-right: 10px;
@@ -290,7 +290,7 @@ label {
     border-radius: 10px;
     font-family: 'Roboto', sans-serif;
     text-align: left;
-    box-shadow: 0px 4px 4px rgba(255, 255, 255, 0.5);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     white-space: nowrap;
 }
 
@@ -305,7 +305,7 @@ width: 180px;
 height: 28px;
 background: #213A6C;
 color: white;
-box-shadow: 0px 4px 4px rgba(255, 255, 255, 0.678);
+box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 border-style: none;
 border-radius: 4px;
 }
