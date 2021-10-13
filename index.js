@@ -42,7 +42,7 @@ function editStatus(index) {
       
       <div class="modifyMenu">
           <ul id="menu-demo2">
-              <li><a href="#">Modifier</a>
+              <li><a id="edit" href="#">Modifier</a>
                   <ul>
                       <li onclick="editStatus('Todo')">To do</li>
                       <li onclick="editStatus('Doing')">Doing</li>
