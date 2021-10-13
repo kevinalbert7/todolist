@@ -64,9 +64,9 @@ function editStatus(index) {
 // -----------Fonction Remove -------------//
 
 function deleteButton() {
-    tasks.splice([list.innerHTML], 1)
+    tasks.splice(onTaskSubmit, 1)
     displayList()
-  }
+}
 
 
 
