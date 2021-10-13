@@ -38,15 +38,17 @@ function editStatus(index) {
       
         <div class="list">   
             <p>${task.value} </p>
-        </div>                       
+        </div>  
+        
+        <div id="editValue">
+        </div>
       
-        <div class="modifyMenu">
-        <div><a id="edit" href="#">Modifier</a></div>
-            <ul id="fleche">
-                <li onclick="editStatus('Todo')">To do</li>
-                <li onclick="editStatus('Doing')">Doing</li>
-                <li onclick="editStatus('Done')">Done</li>
-            </ul>
+        <div id="menuStatus">
+                <ul id="fleche">
+                    <li onclick="editStatus('Todo')">To do</li>
+                    <li onclick="editStatus('Doing')">Doing</li>
+                    <li onclick="editStatus('Done')">Done</li>
+                </ul>
         </div>
       
         <div>
