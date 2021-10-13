@@ -29,7 +29,7 @@ function editStatus(index) {
     <div class="line">           
             
         <div class="statusSticker" id="doingSticker">
-            <img src="img/logo_Check.svg" alt="">
+            <img src="img/logo_Uncheck.png" alt="">
             <div class="statusLabel ${task.status}Color"> /* Couleur de l'étiquette */
                 <p>${task.status}</p>  /* Nom de l'étiquette */
             </div>

@@ -166,12 +166,12 @@ label {
     font-weight: bold;
 }
 
-#status {
+.statusSticker {
     display: flex;
     align-items: center;
 }
 
-#status img {
+.statusSticker img {
     height: 20px;
     margin-right: 10px;
 }
