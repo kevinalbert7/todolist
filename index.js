@@ -51,7 +51,7 @@ function editStatus(index) {
       
         <div>
             <button onClick="deleteButton()">
-            <p>Delete</p>
+            <img class="logoDelete" src="img/logo_Delete.png">
             </button>
         </div>
 
