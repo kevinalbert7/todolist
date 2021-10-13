@@ -129,55 +129,66 @@ label {
     border-radius: 20px 20px 20px 20px;
 }
 
-.list{
+.line {
     display: flex;
     flex-direction: row;
     
     padding: 15px;
-    margin: 5px 250px 5px 30px;
+    margin: 5px 15px 5px 15px;
     border-radius: 20px 20px 20px 20px;
 }
 
-.toDo{
+.toDo {
     background-color: #E87479;
 }
 
-.doing{
+.doing {
     background-color: #FFD977;
 }
 
-.done{
+.done {
     background-color: #9CC8CB;
 }
 
     /* Menus */
+.menu{
+    display: flex;
+    justify-content: end;
+}
 
-#menu-demo2, ul{
+.button{
+    display: flex;
+    align-items: center;
+    margin: 0 15px 0 15px;
+}
+
+
+#menu-demo2, ul {
     padding:0;
     list-style:none;
     text-align:center;
 }
 
-#menu-demo2 li{
+#menu-demo2 li {
     display:inline-block;
     position:relative;
     border-radius: 10px 10px 0px 0px;
 }
 
-#menu-demo2 ul li{
+#menu-demo2 ul li {
     display:inherit;
     border-radius:0;
 }
 
-#menu-demo2 ul li:hover{
+#menu-demo2 ul li:hover {
     border-radius:0;
 }
 
-#menu-demo2 ul li:last-child{
+#menu-demo2 ul li:last-child {
     border-radius: 0px 0px 10px 10px;
 }
 
-#menu-demo2 ul{
+#menu-demo2 ul {
     position:absolute;
     z-index: 1000;
     max-height:0;
@@ -189,13 +200,13 @@ label {
     transition: .8s all .3s;
 }
 
-#menu-demo2 li:hover ul{
+#menu-demo2 li:hover ul {
     max-height:15em;
 }
 
     /* Background des liens menus */
 
-#menu-demo2 li:last-child{
+#menu-demo2 li:last-child {
     background-color: #CFFF6A;
     background-image:-webkit-linear-gradient(top, #CFFF6A 0%, #677F35 100%);
     background-image:linear-gradient(to bottom, #CFFF6A 0%, #677F35 100%);
@@ -203,35 +214,35 @@ label {
 
     /* Background des liens sous menus */
     
-#menu-demo2 li:first-child li{
+#menu-demo2 li:first-child li {
     background: #E87479;
 }
 
-#menu-demo2 li:nth-child(2) li{
+#menu-demo2 li:nth-child(2) li {
     background:#333A40;
 }
 
-#menu-demo2 li:last-child li{
+#menu-demo2 li:last-child li {
     background:#677F35;
 }
 
     /* background des liens menus et sous menus au survol */
 
-#menu-demo2 li:first-child:hover{
+#menu-demo2 li:first-child:hover {
     background:#E87479;
 }
 
-#menu-demo2 li:nth-child(2):hover{
+#menu-demo2 li:nth-child(2):hover {
     background:#FFD977;
 }
 
-#menu-demo2 li:last-child:hover{
+#menu-demo2 li:last-child:hover {
     background:#9CC8CB;
 }
 
     /* les a href */
 
-#menu-demo2 a{
+#menu-demo2 a {
     text-decoration:none;
     display:block;
     padding:8px 32px;
@@ -239,18 +250,18 @@ label {
     font-family:arial;
 }
 
-#menu-demo2 ul a{
+#menu-demo2 ul a {
     padding:8px 0;
 }
 
-#menu-demo2 li:hover li a{
+#menu-demo2 li:hover li a {
     color:#fff;
     text-transform:inherit;
 }
 
     /* Boutons supprimer*/
 
-.button{
+.button {
     text-decoration:none;
     display:block;
     padding:7px 32px;
