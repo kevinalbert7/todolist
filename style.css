@@ -120,9 +120,8 @@ label {
    
     display: flex;
     flex-direction: column;
-    margin-left: 40px;
+    margin-left: 20px;
     padding: 10px;
-
     border: 5px solid #203A6C;
     background-color: whitesmoke;
     border-radius: 20px 20px 20px 20px;
@@ -131,10 +130,13 @@ label {
 .line {
     display: flex;
     flex-direction: row;
-    
     padding: 15px;
     margin: 5px 15px 5px 15px;
     border-radius: 20px 20px 20px 20px;
+}
+
+.list{
+    border-radius: 10px 10px 10px 10px;
 }
 
 .toDo {
