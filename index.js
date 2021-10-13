@@ -17,10 +17,11 @@ function onTaskSubmit() {
         list.innerHTML = list.innerHTML + `
         
         <div class="line">           
-        <div class="check">
+        
+        <div id="status" class="status">
         </div>
         
-        <div class="list todoColor">   
+        <div class="list">   
             <p>${task.value} </p>
         </div>                       
         

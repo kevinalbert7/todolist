@@ -152,7 +152,14 @@ label {
 }
 
 .list{
-    border-radius: 10px 10px 10px 10px;
+    width: 300px;
+    border-bottom: #213A6C solid 1px;
+    padding: 5px 5px;
+    margin-right: 10px;
+}
+
+.status {
+    git a
 }
 
 
