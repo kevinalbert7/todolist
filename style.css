@@ -178,11 +178,12 @@ label {
     padding-bottom: 4px;
 }
 
-/* Menu dropdown */
-
-.StatusMenu {
-    width: 40px;
+.statusMenu select {
+    border-style: none;
+    border-radius: 10px;
+    padding: 5px 10px;
 }
+
 
     /* Boutons*/
 
@@ -202,9 +203,6 @@ label {
     width: 16px;
 }
 
-.line button .logoDelete:hover {
-    filter: brightness(0.1);
-}
 
 
 /* Sidebar */

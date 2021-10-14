@@ -1,46 +1,82 @@
 var list = document.getElementById("list")
 var tasks = []
-
-
+var checkboxStatus = []
 
 // ----------Fonction nouvelle tâche---------------- // 
 
-function onTaskSubmit() {
+function onTaskSubmit()  {
     var input = document.getElementById("name").value
     var task = {
         value: input,
-        status: "TO DO",
+        status: "To do",
     }
     tasks.push(task)
     displayList()
 }   
 
 // ----------Fonction edit value ---------------- // 
-function remove(index) {
-
+function edit(titre) {
+    var task = {
+        value: titre,
+        status: "TO DO",
+    }
+    tasks.push(task)
+    displayList()
 }
 
-// ----------Fonction edit status---------------- // 
-// function editStatus(index) {
-//     tasks[index].status = "doing"
-//     displayList()
-// }
+// ----------Fonction edit status ---------------- // 
+function editStatus(event, index) {
+    console.log("//////////////////////////////////")
+    //event variable fourni par evenement "onchange"
+    console.log(event)
+    console.log(index)
+    // var select = document.getElementById("statusMenu").value
+    // console.log(select)
+    var task = tasks[index]
+    console.log(task)
+    // pour récupérer valeur de select event.target.value (target=objet)
+    task.status = event.target.value
+    console.log(task)
+   
+    displayList()
+}
+  
+// ----------Fonction filter ---------------- // 
+function filterStatus() {
+    var checkboxes = document.getElementById("checkboxFilter")
+    var status = {
+       checkbox
+    }
+    
+    checkboxStatus.push(task)
+}
+
+
+// ---------- Fonction Display ---------------- // 
 
 function displayList() {
     list.innerHTML = ``
-  
+    var options = ["To do", "Done", "Doing"]
+
     tasks.forEach(function(task, index) {
+    
+        var optionsElements = options.map(function(option) {
+            if (task.status === option) {
+                return `<option class="todoColor" value="${option}" selected>${option}</option>`
+            }
+
+            return `<option class="todoColor" value="${option}">${option}</option>`
+        }) 
+
         list.innerHTML = list.innerHTML + `
-      
+    
             <div class="line">           
             
-                <div class="statusSticker" id="statusSticker">
+                <div class="statusSticker">
                     <img src="img/logo_Uncheck.png" alt="">
-                    <div class="StatusMenu">
-                    <select name="status" id="statusMenu">
-                            <option value="Todo" onclick="editStatus('Todo')">To do</option>
-                            <option value="Doing" onclick="editStatus('Doing')">Doing</option>
-                            <option value="Done" onclick="editStatus('Done')">Done</option>
+                    <div class="statusMenu">
+                    <select name="status" id="statusMenu" onchange="editStatus(event, ${index})">
+                        ${optionsElements}
                     </select>
                     </div>
                 </div>
@@ -51,7 +87,7 @@ function displayList() {
                 
                 <div class="lineButtons">
 
-                    <button id="editValue" onClick="editValue()">
+                    <button id="editValue" onclick="edit()">
                         <p>Edit</p>
                     </button>
 
@@ -64,7 +100,7 @@ function displayList() {
             </div>
         </div>
         `
-})
+    })
 }
 
 
