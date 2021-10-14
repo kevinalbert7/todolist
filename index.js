@@ -47,6 +47,7 @@ function displayList() {
             }
 
             return `<option class="${option}Color" value="${option}">${option}</option>`
+
         }) 
         
         list.innerHTML = list.innerHTML + `
