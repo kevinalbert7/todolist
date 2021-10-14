@@ -33,24 +33,6 @@ function addForm(index) {
 }
 
 
-// ----------Fonction edit status ---------------- // 
-function editStatus(event, index) {
-    console.log("//////////////////////////////////")
-    //event variable fourni par evenement "onchange"
-    console.log(event)
-    console.log(index)
-    // var select = document.getElementById("statusMenu").value
-    // console.log(select)
-    var task = tasks[index]
-    console.log(task)
-    // pour récupérer valeur de select event.target.value (target=objet)
-    task.status = event.target.value
-    console.log(task)
-   
-    displayList()
-}
-  
-
 // ---------- Fonction Display ---------------- // 
 
 function displayList() {
@@ -147,6 +129,7 @@ function addForm(index) {
 
 
 // ----------Fonction edit status ---------------- // 
+
 function editStatus(event, index) {
     console.log("//////////////////////////////////")
     //event variable fourni par evenement "onchange"
@@ -162,10 +145,11 @@ function editStatus(event, index) {
     
     displayList()
 }
+
 // ----------Fonction filter ---------------- // 
 
-// function filterStatus() {
-//     var checkboxes = document.getElementById("checkboxFilter")
+function filterStatus() {
+    var checkboxes = document.getElementById("checkboxFilter")
     var status = {
         checkbox
     }
@@ -174,21 +158,21 @@ function editStatus(event, index) {
 }
 // -----------Fonction filtrer les tâches -------------//
 
-function filterStatus(event, index) {
-    var input = document.getElementById("checkboxFilter")
+// function filterStatus(event, index) {
+//     var input = document.getElementById("checkboxFilter")
     
-    if(input.statusMenu == "addTodo") {
-        return (list.innerHTML(option["To Do"])
-    }else if(input.id == "addDoing") {
+//     if(input.statusMenu == "addTodo") {
+//         return (list.innerHTML(option["To Do"])
+//     }else if(input.id == "addDoing") {
 
-    }else if(input.id == "addDone") {
+//     }else if(input.id == "addDone") {
 
-    }
-
-
+//     }
 
 
 
-}
+
+
+
   
 
