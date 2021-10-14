@@ -22,10 +22,9 @@ function addForm(index) {
     form.innerHTML = form.innerHTML + `
         <form>
             <input id="taskTitle" class="editFormInput" type="text" required >
-            <button class="editFormButton">Send</button>
+            <button class="editFormButton" onclick="sendForm">Send</button>
         </form>
     `
-
     var parent = document.getElementById("name");
     parent.replace(form.innerHTML);
 
