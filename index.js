@@ -106,8 +106,8 @@ function displayList() {
 
 // -----------Fonction remove -------------//
 
-function deleteLine(onclick) {
-    tasks.splice(onclick, 1)
+function deleteLine(onClick) {
+    tasks.splice(onClick, 1)
     displayList()
 }
 
@@ -124,12 +124,14 @@ function random() {
 }
 
 // -----------Fonction affichage des tâches aléatoires -------------//
+
 var randomAction = random()
 
-function displayRandomTask() {
+function displayRandomTask(onlick) {
+    var input = document.getElementById("randomBtn").value
     var randomTask = {
-        value: randomAction,
-        status: "TO DO",
+        value: random(),
+        status: "To do",
     }
     tasks.push(randomTask)
     displayList()
