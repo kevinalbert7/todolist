@@ -91,7 +91,7 @@ function displayList() {
                         <p>Edit</p>
                     </button>
 
-                    <button onClick="deleteButton()">
+                    <button onClick="deleteLine(${index})">
                         <p>Delete</p>
                     </button>
                     
@@ -103,13 +103,13 @@ function displayList() {
     })
 }
 
-
 // -----------Fonction remove -------------//
 
-function deleteButton() {
-    tasks.splice(onTaskSubmit, 1)
+function deleteLine(onclick) {
+    tasks.splice(onclick, 1)
     displayList()
 }
+
 
 // -----------Fonction tâches aléatoires -------------//
 var randomArray = ["Apprendre par coeur le dictionnaire", "Trier par taille toutes les vis de la boîte à outils","Lancer un faux débat sur Twitter", "Supprimer les mails inutiles","Tester tous les stylos de la maison","Pousser mémé dans les orties","Assembler toutes les paires de chaussettes", "Me faire cuire un oeuf"]
