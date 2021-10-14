@@ -111,23 +111,6 @@ function displayRandomTask(onlick) {
     displayList()
 }
 
-// ----------Fonction edit value ---------------- // 
-function addForm(index) {
-    var form = document.getElementById(`taskTitle${index}`)
-
-
-    form.innerHTML = form.innerHTML + `
-        <form>
-            <input id="taskTitle" class="addTaskText" type="text" required >
-        </form>
-    `
-    var parent = document.getElementById("name");
-    parent.replace(form.innerHTML);
-
-    displayList()
-}
-
-
 // ----------Fonction edit status ---------------- // 
 
 function editStatus(event, index) {
