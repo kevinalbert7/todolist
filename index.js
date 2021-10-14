@@ -36,8 +36,12 @@ function displayList() {
             
                 <div class="statusSticker" id="statusSticker">
                     <img src="img/logo_Uncheck.png" alt="">
-                    <div class="statusColor" id="statusColor">
-                        <p>${task.status}</p>  
+                    <div class="StatusMenu">
+                    <select name="status" id="statusMenu">
+                            <option value="Todo" onclick="editStatus('Todo')">To do</option>
+                            <option value="Doing" onclick="editStatus('Doing')">Doing</option>
+                            <option value="Done" onclick="editStatus('Done')">Done</option>
+                    </select>
                     </div>
                 </div>
                 
@@ -50,15 +54,6 @@ function displayList() {
                     <button id="editValue" onClick="editValue()">
                         <p>Edit</p>
                     </button>
-                   
-                    <div class="dropdownMenu" id="statusMenu">
-                        <button><img class="arrow" src="img/dropdown_arrow.png"></button>
-                        <div class="dropdown-content">
-                            <a href="#" onclick="editStatus('Todo')">To do</a>
-                            <a href="#" onclick="editStatus('Doing')">Doing</a>
-                            <a href="#" onclick="editStatus('Done')">Done</a>
-                        </div>
-                    </div>
 
                     <button onClick="deleteButton()">
                         <p>Delete</p>
