@@ -11,12 +11,8 @@ function onTaskSubmit()  {
         status: "To do",
     }
     tasks.push(task)
-<<<<<<< HEAD
-    displayList(tasks)
-=======
     displayList()
     input.value = ``
->>>>>>> b4556ea61c755fb4a4ed96d16e368bf917bedf7c
 }   
 
 // ----------Fonction edit value ---------------- // 
@@ -31,10 +27,6 @@ function addForm(index) {
         </form>
     `
 
-<<<<<<< HEAD
-    displayList(tasks)
-=======
->>>>>>> b4556ea61c755fb4a4ed96d16e368bf917bedf7c
 }
 
 function sendForm(index) {
@@ -142,8 +134,6 @@ function editStatus(event, index,) {
 }
 
 // ----------Fonction filter ---------------- // 
-<<<<<<< HEAD
-=======
 function enter(elem){
     elem.style.backgroundColor = '#FF0000';
 }
@@ -158,7 +148,6 @@ function filterStatus() {
     
     checkboxStatus.push(task)
 }
->>>>>>> b4556ea61c755fb4a4ed96d16e368bf917bedf7c
 // -----------Fonction filtrer les tâches -------------//
 
 function filterStatus(status) {
