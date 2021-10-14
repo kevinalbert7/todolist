@@ -50,33 +50,10 @@ function displayList() {
                 </div>
                 
             </div>
-        </div>
-      
-      
-        <div class="list">   
-            <p>${task.value} </p>
-        </div>                       
-      
-        <div class="modifyMenu">
-            <div><a id="edit" href="#">Modifier</a></div>
-            <ul id="fleche">
-                <li onclick="editStatus('Todo')">To do</li>
-                <li onclick="editStatus('Doing')">Doing</li>
-                <li onclick="editStatus('Done')">Done</li>
-            </ul>
-        </div>
-      
-        <div>
-            <button onClick="deleteButton()">
-            <img class="logoDelete" src="img/logo_Delete.png">
-            </button>
-        </div>
 
-  </div>
-  `
-})
+        `
+    })
 }
-
 
 // -----------Fonction remove -------------//
 
