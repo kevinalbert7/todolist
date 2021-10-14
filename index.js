@@ -17,6 +17,7 @@ function onTaskSubmit()  {
 // ----------Fonction edit value ---------------- // 
 function addForm(index) {
      var form = document.getElementById(`taskTitle${index}`)
+     console.log("addform", form)
      form.innerHTML = ``
 
      form.innerHTML = form.innerHTML + `
@@ -25,15 +26,13 @@ function addForm(index) {
             <button type="submit" class="editFormButton">Send</button>
         </form>
     `
-
-    displayList(tasks)
 }
 
 function sendForm(index) {
     var input = document.getElementById(`inputTitle${index}`)
     tasks[index].value = input.value
     
-    displayList()
+    displayList(tasks)
 }
 
 // ---------- Fonction Display ---------------- // 
@@ -134,6 +133,20 @@ function editStatus(event, index,) {
 }
 
 // ----------Fonction filter ---------------- // 
+function enter(elem){
+    elem.style.backgroundColor = '#FF0000';
+}
+
+// ----------Fonction filter ---------------- // 
+
+// function filterStatus() {
+//     var checkboxes = document.getElementById("checkboxFilter")
+//     var status = {
+//         checkbox
+//     }
+    
+//     checkboxStatus.push(task)
+// }
 // -----------Fonction filtrer les tâches -------------//
 
 function filterStatus(status) {
