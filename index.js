@@ -14,6 +14,85 @@ function onTaskSubmit()  {
     displayList()
 }   
 
+
+// ---------- Fonction afficher des nouvelles tâches ---------------- // 
+
+function displayList() {
+    list.innerHTML = ``
+    var options = ["To do", "Doing", "Done"]
+    
+    tasks.forEach(function(task, index) {
+    
+        var optionsElements = options.map(function(option) {
+            if (task.status === option) {
+                return `<option class="${option}Color" value="${option}" selected>${option}</option>`
+            }
+
+            return `<option class="${option}Color" value="${option}">${option}</option>`
+        }) 
+        
+        list.innerHTML = list.innerHTML + `
+        
+            <div class="line">           
+            
+                <div class="statusSticker">
+                    <img src="img/logo_Uncheck.png" alt="">
+                    <select class="statusMenu" id="statusMenu" onchange="editStatus(event, ${index})">
+                        ${optionsElements}
+                    </select>
+                </div>
+                
+                <div class="list" id="taskTitle${index}">   
+                    <p>${task.value} </p>
+                </div>    
+                
+                <div class="lineButtons">
+
+                    <button id="editValue" onclick="addForm(${index})">Edit</button>
+
+                    <button onClick="deleteLine(${index})">Delete</button>
+                    
+                </div>
+
+            </div>
+            </div>
+            `
+        })
+}
+    
+// -----------Fonction remove -------------//
+
+function deleteLine(onClick) {
+    tasks.splice(onClick, 1)
+    displayList()
+}
+
+
+// -----------Fonction tâches aléatoires -------------//
+var randomArray = ["Apprendre par coeur le dictionnaire", "Trier par taille toutes les vis de la boîte à outils","Lancer un faux débat sur Twitter", "Supprimer les mails inutiles","Tester tous les stylos de la maison","Pousser mémé dans les orties","Assembler toutes les paires de chaussettes", "Me faire cuire un oeuf"]
+
+function random() {
+    var min = 0
+    var max = 7
+    var random = Math.floor(Math.random() * (max - min + 1) + min)
+    
+    return randomArray[random]
+}
+
+// -----------Fonction affichage des tâches aléatoires -------------//
+
+var randomAction = random()
+
+function displayRandomTask(onlick) {
+    var input = document.getElementById("randomBtn").value
+    var randomTask = {
+        value: random(),
+        status: "To do",
+    }
+    tasks.push(randomTask)
+    displayList()
+}
+
 // ----------Fonction edit value ---------------- // 
 function addForm(index) {
     var form = document.getElementById(`taskTitle${index}`)
@@ -44,102 +123,34 @@ function editStatus(event, index) {
     // pour récupérer valeur de select event.target.value (target=objet)
     task.status = event.target.value
     console.log(task)
-   
+    
     displayList()
 }
-  
+// ----------Fonction filter ---------------- // 
 
-// ---------- Fonction Display ---------------- // 
-
-function displayList() {
-    list.innerHTML = ``
-    var options = ["To do", "Doing", "Done"]
-
-    tasks.forEach(function(task, index) {
-    
-        var optionsElements = options.map(function(option) {
-            if (task.status === option) {
-                return `<option class="${option}Color" value="${option}" selected>${option}</option>`
-            }
-
-            return `<option class="${option}Color" value="${option}">${option}</option>`
-        }) 
-        
-        list.innerHTML = list.innerHTML + `
-    
-            <div class="line">           
-            
-                <div class="statusSticker">
-                    <img src="img/logo_Uncheck.png" alt="">
-                    <select class="statusMenu" id="statusMenu" onchange="editStatus(event, ${index})">
-                        ${optionsElements}
-                    </select>
-                </div>
-                
-                <div class="list" id="taskTitle${index}">   
-                    <p>${task.value} </p>
-                </div>    
-                
-                <div class="lineButtons">
-
-                    <button id="editValue" onclick="addForm(${index})">Edit</button>
-
-                    <button onClick="deleteLine(${index})">Delete</button>
-                    
-                </div>
-
-            </div>
-            </div>
-            `
-        })
+// function filterStatus() {
+//     var checkboxes = document.getElementById("checkboxFilter")
+    var status = {
+        checkbox
     }
     
-    // -----------Fonction remove -------------//
-    
-    function deleteLine(onClick) {
-        tasks.splice(onClick, 1)
-        displayList()
-    }
-    
-    
-    // -----------Fonction tâches aléatoires -------------//
-    var randomArray = ["Apprendre par coeur le dictionnaire", "Trier par taille toutes les vis de la boîte à outils","Lancer un faux débat sur Twitter", "Supprimer les mails inutiles","Tester tous les stylos de la maison","Pousser mémé dans les orties","Assembler toutes les paires de chaussettes", "Me faire cuire un oeuf"]
-    
-    function random() {
-        var min = 0
-        var max = 7
-        var random = Math.floor(Math.random() * (max - min + 1) + min)
-        
-        return randomArray[random]
-    }
-    
-    // -----------Fonction affichage des tâches aléatoires -------------//
-    
-    var randomAction = random()
-    
-    function displayRandomTask(onlick) {
-        var input = document.getElementById("randomBtn").value
-        var randomTask = {
-            value: random(),
-            status: "To do",
-        }
-        tasks.push(randomTask)
-        displayList()
-    }
-    
-    // ----------Fonction filter ---------------- // 
+    checkboxStatus.push(task)
+}
+// -----------Fonction filtrer les tâches -------------//
 
-    function filterStatus() {
-        var checkboxes = document.getElementById("checkboxFilter")
-        var status = {
-           checkbox
-        }
-        
-        checkboxStatus.push(task)
-    }
-    // -----------Fonction filtrer les tâches -------------//
+function filterStatus(event, index) {
+    var input = document.getElementById("checkboxFilter")
+    
+    if(input.statusMenu == "addTodo") {
+        return (list.innerHTML(option["To Do"])
+    }else if(input.id == "addDoing") {
 
-function filterStatus() {
+    }else if(input.id == "addDone") {
+
+    }
+
+
+
 
 
 }
