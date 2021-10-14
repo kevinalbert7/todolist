@@ -15,14 +15,21 @@ function onTaskSubmit()  {
 }   
 
 // ----------Fonction edit value ---------------- // 
-function edit(titre) {
-    var task = {
-        value: titre,
-        status: "TO DO",
-    }
-    tasks.push(task)
+function addForm(index) {
+    var form = document.getElementById(`taskTitle${index}`)
+
+
+    form.innerHTML = form.innerHTML + `
+        <form>
+            <input id="taskTitle" class="addTaskText" type="text" required >
+        </form>
+    `
+    var parent = document.getElementById("name");
+    parent.replace(form.innerHTML);
+
     displayList()
 }
+
 
 // ----------Fonction edit status ---------------- // 
 function editStatus(event, index) {
@@ -62,10 +69,10 @@ function displayList() {
     
         var optionsElements = options.map(function(option) {
             if (task.status === option) {
-                return `<option class="todoColor" value="${option}" selected>${option}</option>`
+                return `<option class="${option}Color" value="${option}" selected>${option}</option>`
             }
 
-            return `<option class="todoColor" value="${option}">${option}</option>`
+            return `<option class="${option}Color" value="${option}">${option}</option>`
         }) 
 
         list.innerHTML = list.innerHTML + `
@@ -74,26 +81,20 @@ function displayList() {
             
                 <div class="statusSticker">
                     <img src="img/logo_Uncheck.png" alt="">
-                    <div class="statusMenu">
-                    <select name="status" id="statusMenu" onchange="editStatus(event, ${index})">
+                    <select class="statusMenu" id="statusMenu" onchange="editStatus(event, ${index})">
                         ${optionsElements}
                     </select>
-                    </div>
                 </div>
                 
-                <div class="list">   
+                <div class="list" id="taskTitle${index}">   
                     <p>${task.value} </p>
                 </div>    
                 
                 <div class="lineButtons">
 
-                    <button id="editValue" onclick="edit()">
-                        <p>Edit</p>
-                    </button>
+                    <button id="editValue" onclick="addForm(${index})">Edit</button>
 
-                    <button onClick="deleteLine(${index})">
-                        <p>Delete</p>
-                    </button>
+                    <button onClick="deleteLine(${index})">Delete</button>
                     
                 </div>
 

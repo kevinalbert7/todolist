@@ -178,7 +178,7 @@ label {
     padding-bottom: 4px;
 }
 
-.statusMenu select {
+.statusMenu {
     border-style: none;
     border-radius: 10px;
     padding: 5px 10px;
