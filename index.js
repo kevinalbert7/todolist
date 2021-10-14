@@ -138,18 +138,6 @@ function enter(elem){
     elem.style.backgroundColor = '#FF0000';
 }
 
-// ----------Fonction filter ---------------- // 
-
-// function filterStatus() {
-//     var checkboxes = document.getElementById("checkboxFilter")
-//     var status = {
-//         checkbox
-//     }
-    
-//     checkboxStatus.push(task)
-// }
-// -----------Fonction filtrer les tâches -------------//
-
 function filterStatus(status) {
     
     
