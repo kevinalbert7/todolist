@@ -100,9 +100,11 @@ function displayRandomTask(onlick) {
     displayList()
 }
 
+// -----------Fonction filtrer les tâches -------------//
 
+function taskFilter() {
 
-
-
+    
+}
   
 
