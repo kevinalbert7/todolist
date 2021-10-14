@@ -74,10 +74,6 @@ header .addTask .logoForm {
     width: 40px;
 }
 
-div.form-example {
-    display: table-row;
-}
-
 header .addTask label {
     display: table-cell;
     font-family: Amatic SC;
@@ -118,7 +114,6 @@ header .addTask .addTaskButton:hover {
     color: #213A6C;
     border: solid #213A6C 2px;
 }
-
 
 label {
     padding-right: 10px;
@@ -168,97 +163,41 @@ label {
     font-weight: bold;
 }
 
+
+    /* Debut ligne */
+
 .statusSticker {
     display: flex;
     justify-content: flex-start;
     align-items: center;
+    padding-top: 10px;
 }
 
 .statusSticker img {
     height: 20px;
+    padding-bottom: 4px;
 }
 
-.statusLabel  {
-    width: 70px;
-    height: 20px;
-    border-radius: 8px;
+/* Menu dropdown */
+
+.StatusMenu {
+    width: 40px;
+}
+
+    /* Boutons*/
+
+.lineButtons { 
     display: flex;
-    justify-content: center;
-    align-items: center;
-
+    justify-content: flex-start;
+    margin: 5px 0px;
 }
 
-
-    /* Menus */
-
-/* Hamburger button */
-.top-nav-label {
-    position: relative;
-    right: 0;
-    top: 0;
-    height: 2.5rem;
-    width: 2.5rem;
-    border-radius: 0.1875rem;
-    cursor: pointer;
-    display: block;
-    font-size: 0;
-    margin: 0;
-    overflow: hidden;
-    padding: 0;
-}
-  
-.site-header > .top-nav-label .open-close-menu {
-    display: block;
-    position: absolute;
-    z-index: 99999;
-    background: #1450aa;
-    border-radius: 0.1875rem;
-    height: 0.25rem;
-    left: 0.1875rem;
-    right: 0.1875rem;
-    top: 1.125rem;
-}
-  
-.site-header > .top-nav-label .open-close-menu::before,
-.site-header > .top-nav-label .open-close-menu::after {
-    border-radius: 0.1875rem;
-    content: "";
-    display: block;
-    position: absolute;
-    background-color: #1450aa;
-    height: 0.25rem;
-    left: 0;
-    width: 100%;
-}
-  
-.site-header > .top-nav-label .open-close-menu::before {
-    top: -0.6875rem;
-}
-  
-.site-header > .top-nav-label .open-close-menu::after {
-    bottom: -0.6875rem;
-} 
-
-/* Flèche modifier */
-
-.arrow {
-    border: solid #878181;
-    border-width: 0 3px 3px 0;
-    display: inline-block;
-    padding: 3px;
-
-    transform: rotate(45deg);
-    -webkit-transform: rotate(45deg);
-}
-  
-
-    /* Boutons supprimer*/
-
-.line button { 
+.lineButtons button {
     border: none;
     background: none;
-    cursor: pointer;  
+    cursor: pointer;    
 }
+
 .line button .logoDelete {
     width: 16px;
 }
