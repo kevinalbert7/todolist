@@ -5,13 +5,14 @@ var checkboxStatus = []
 // ----------Fonction nouvelle tâche---------------- // 
 
 function onTaskSubmit()  {
-    var input = document.getElementById("name").value
+    var input = document.getElementById("name")
     var task = {
-        value: input,
+        value: input.value,
         status: "To do",
     }
     tasks.push(task)
     displayList()
+    input.value = ``
 }   
 
 // ----------Fonction edit value ---------------- // 
@@ -19,18 +20,21 @@ function addForm(index) {
      var form = document.getElementById(`taskTitle${index}`)
      form.innerHTML = ``
 
-    form.innerHTML = form.innerHTML + `
-        <form>
-            <input id="taskTitle" class="editFormInput" type="text" required >
-            <button class="editFormButton" onclick="sendForm">Send</button>
+     form.innerHTML = form.innerHTML + `
+        <form onsubmit="sendForm(${index}); return false;">
+            <input id="inputTitle${index}" class="editFormInput" type="text" required >
+            <button type="submit" class="editFormButton">Send</button>
         </form>
     `
-    var parent = document.getElementById("name");
-    parent.replace(form.innerHTML);
 
-    displayList()
 }
 
+function sendForm(index) {
+    var input = document.getElementById(`inputTitle${index}`)
+    tasks[index].value = input.value
+    
+    displayList()
+}
 
 // ---------- Fonction Display ---------------- // 
 
@@ -42,10 +46,10 @@ function displayList() {
     
         var optionsElements = options.map(function(option) {
             if (task.status === option) {
-                return `<option class="${option}Color" value="${option}" selected>${option}</option>`
+                return `<option class="statusColor" value="${option}" selected>${option}</option>`
             }
 
-            return `<option class="${option}Color" value="${option}">${option}</option>`
+            return `<option class="statusColor" value="${option}">${option}</option>`
 
         }) 
         
@@ -113,7 +117,7 @@ function displayRandomTask(onlick) {
 
 // ----------Fonction edit status ---------------- // 
 
-function editStatus(event, index) {
+function editStatus(event, index,) {
     console.log("//////////////////////////////////")
     //event variable fourni par evenement "onchange"
     console.log(event)
@@ -127,6 +131,11 @@ function editStatus(event, index) {
     console.log(task)
     
     displayList()
+}
+
+// ----------Fonction filter ---------------- // 
+function enter(elem){
+    elem.style.backgroundColor = '#FF0000';
 }
 
 // ----------Fonction filter ---------------- // 
