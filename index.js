@@ -14,8 +14,44 @@ function onTaskSubmit()  {
     displayList()
 }   
 
+// ----------Fonction edit value ---------------- // 
+function addForm(index) {
+     var form = document.getElementById(`taskTitle${index}`)
+     form.innerHTML = ``
 
-// ---------- Fonction afficher des nouvelles tâches ---------------- // 
+    form.innerHTML = form.innerHTML + `
+        <form>
+            <input id="taskTitle" class="editFormInput" type="text" required >
+            <button class="editFormButton">Send</button>
+        </form>
+    `
+
+    var parent = document.getElementById("name");
+    parent.replace(form.innerHTML);
+
+    displayList()
+}
+
+
+// ----------Fonction edit status ---------------- // 
+function editStatus(event, index) {
+    console.log("//////////////////////////////////")
+    //event variable fourni par evenement "onchange"
+    console.log(event)
+    console.log(index)
+    // var select = document.getElementById("statusMenu").value
+    // console.log(select)
+    var task = tasks[index]
+    console.log(task)
+    // pour récupérer valeur de select event.target.value (target=objet)
+    task.status = event.target.value
+    console.log(task)
+   
+    displayList()
+}
+  
+
+// ---------- Fonction Display ---------------- // 
 
 function displayList() {
     list.innerHTML = ``
@@ -48,9 +84,9 @@ function displayList() {
                 
                 <div class="lineButtons">
 
-                    <button id="editValue" onclick="addForm(${index})">Edit</button>
+                    <button id="editValue" onclick="addForm(${index})"><img src="img/logo_pencil.svg">Edit</button>
 
-                    <button onClick="deleteLine(${index})">Delete</button>
+                    <button onClick="deleteLine(${index})"><img src="img/logo_Delete-01.svg">Delete</button>
                     
                 </div>
 
