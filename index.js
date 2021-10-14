@@ -16,14 +16,16 @@ function onTaskSubmit()  {
 
 // ----------Fonction edit value ---------------- // 
 function addForm(index) {
-    var form = document.getElementById(`taskTitle${index}`)
-
+     var form = document.getElementById(`taskTitle${index}`)
+     form.innerHTML = ``
 
     form.innerHTML = form.innerHTML + `
         <form>
-            <input id="taskTitle" class="addTaskText" type="text" required >
+            <input id="taskTitle" class="editFormInput" type="text" required >
+            <button class="editFormButton">Send</button>
         </form>
     `
+
     var parent = document.getElementById("name");
     parent.replace(form.innerHTML);
 
@@ -92,9 +94,9 @@ function displayList() {
                 
                 <div class="lineButtons">
 
-                    <button id="editValue" onclick="addForm(${index})">Edit</button>
+                    <button id="editValue" onclick="addForm(${index})"><img src="img/logo_pencil.svg">Edit</button>
 
-                    <button onClick="deleteLine(${index})">Delete</button>
+                    <button onClick="deleteLine(${index})"><img src="img/logo_Delete-01.svg">Delete</button>
                     
                 </div>
 

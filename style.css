@@ -67,7 +67,7 @@ header .addTask {
     display: flex;
     justify-content: center;
     align-items: flex-end;
-    margin-left: 20px;
+    margin-left: 40px;
 }
 
 header .addTask .logoForm {
@@ -154,7 +154,7 @@ label {
     width: 400px;
     border-bottom: #878181 solid 1px;
     padding: 5px 5px;
-    margin-right: 10px;
+    margin: 0px 10px;
 }
 
 .list p{
@@ -190,19 +190,58 @@ label {
 .lineButtons { 
     display: flex;
     justify-content: flex-start;
-    margin: 5px 0px;
+    margin-top: 5px;
+    
 }
 
 .lineButtons button {
     border: none;
     background: none;
-    cursor: pointer;    
+    cursor: pointer; 
+    display: flex;   
+    align-items: center;
+    margin-right: 10px;
+    color: #203A6C;
+    filter: grayscale(100%) brightness(2);
+    font-size: 12px;
+    font-weight: 300;
+}
+
+.lineButtons button:hover {
+    filter: grayscale(0%) brightness(1);
+    
+}
+
+.lineButtons button img {
+    width: 18px;
+    margin-right: 4px;
 }
 
 .line button .logoDelete {
     width: 16px;
 }
 
+    /* editForm */ 
+
+.editFormInput {
+    width: 300px;
+    height: 18px;
+}
+
+.editFormButton {
+    font-family: 'Roboto', sans-serif;
+    color: white;
+    background-color: #203A6C;
+    border-radius: 3px;
+    border-style: none;
+    padding: 3px 9px;
+}
+
+.editFormButton:hover {
+    background: white;
+    color: #213A6C;
+    border: solid #213A6C 1px;
+}
 
 
 /* Sidebar */
