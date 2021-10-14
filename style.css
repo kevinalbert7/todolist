@@ -212,8 +212,7 @@ label {
 }
 
 .lineButtons button:hover {
-    filter: grayscale(0%) brightness(1);
-    
+    filter: grayscale(0%) brightness(1);  
 }
 
 .lineButtons button img {
@@ -228,7 +227,7 @@ label {
     /* editForm */ 
 
 .editFormInput {
-    width: 300px;
+    width: 250px;
     height: 18px;
 }
 
