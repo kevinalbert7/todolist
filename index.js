@@ -11,7 +11,7 @@ function onTaskSubmit()  {
         status: "To do",
     }
     tasks.push(task)
-    displayList()
+    displayList(tasks)
 }   
 
 // ----------Fonction edit value ---------------- // 
@@ -28,17 +28,17 @@ function addForm(index) {
     var parent = document.getElementById("name");
     parent.replace(form.innerHTML);
 
-    displayList()
+    displayList(tasks)
 }
 
 
 // ---------- Fonction Display ---------------- // 
 
-function displayList() {
+function displayList(array) {
     list.innerHTML = ``
     var options = ["To do", "Doing", "Done"]
     
-    tasks.forEach(function(task, index) {
+    array.forEach(function(task, index) {
     
         var optionsElements = options.map(function(option) {
             if (task.status === option) {
@@ -82,7 +82,7 @@ function displayList() {
 
 function deleteLine(onClick) {
     tasks.splice(onClick, 1)
-    displayList()
+    displayList(tasks)
 }
 
 
@@ -108,7 +108,7 @@ function displayRandomTask(onlick) {
         status: "To do",
     }
     tasks.push(randomTask)
-    displayList()
+    displayList(tasks)
 }
 
 // ----------Fonction edit status ---------------- // 
@@ -126,39 +126,17 @@ function editStatus(event, index) {
     task.status = event.target.value
     console.log(task)
     
-    displayList()
+    displayList(tasks)
 }
 
 // ----------Fonction filter ---------------- // 
-
-function filterStatus() {
-    var checkboxes = document.getElementById("checkboxFilter")
-    var status = {
-        checkbox
-    }
-    
-    checkboxStatus.push(task)
-}
 // -----------Fonction filtrer les tâches -------------//
 
-function filterStatus(event, index) {
-    var input = document.getElementById("checkboxFilter")
-   
-    forEach
-
-    if(statusMenu == "addTodo") {
-        return (displayList(option["To Do"]))
-    } else if (statusMenu == "addDoing") {
-        return (displayList(option["Doing"]))
-    } else if (statusMenu == "addDone") {
-        (displayList(option["Done"]))
-    }
-
+function filterStatus(status) {
+    
+    
+    var filterTask = tasks.filter(function(task){
+        return task.status === status
+    })
+    displayList(filterTask)
 }
-
-
-
-
-
-  
-
