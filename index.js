@@ -158,17 +158,20 @@ function filterStatus() {
 }
 // -----------Fonction filtrer les tâches -------------//
 
-// function filterStatus(event, index) {
-//     var input = document.getElementById("checkboxFilter")
-    
-//     if(input.statusMenu == "addTodo") {
-//         return (list.innerHTML(option["To Do"])
-//     }else if(input.id == "addDoing") {
+function filterStatus(event, index) {
+    var input = document.getElementById("checkboxFilter")
+   
+    forEach
 
-//     }else if(input.id == "addDone") {
+    if(statusMenu == "addTodo") {
+        return (displayList(option["To Do"]))
+    } else if (statusMenu == "addDoing") {
+        return (displayList(option["Doing"]))
+    } else if (statusMenu == "addDone") {
+        (displayList(option["Done"]))
+    }
 
-//     }
-
+}
 
 
 
