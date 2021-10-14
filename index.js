@@ -48,22 +48,12 @@ function editStatus(event, index) {
     displayList()
 }
   
-// ----------Fonction filter ---------------- // 
-function filterStatus() {
-    var checkboxes = document.getElementById("checkboxFilter")
-    var status = {
-       checkbox
-    }
-    
-    checkboxStatus.push(task)
-}
-
 
 // ---------- Fonction Display ---------------- // 
 
 function displayList() {
     list.innerHTML = ``
-    var options = ["To do", "Done", "Doing"]
+    var options = ["To do", "Doing", "Done"]
 
     tasks.forEach(function(task, index) {
     
@@ -74,7 +64,7 @@ function displayList() {
 
             return `<option class="${option}Color" value="${option}">${option}</option>`
         }) 
-
+        
         list.innerHTML = list.innerHTML + `
     
             <div class="line">           
@@ -99,49 +89,59 @@ function displayList() {
                 </div>
 
             </div>
-        </div>
-        `
-    })
-}
-
-// -----------Fonction remove -------------//
-
-function deleteLine(onClick) {
-    tasks.splice(onClick, 1)
-    displayList()
-}
-
-
-// -----------Fonction tâches aléatoires -------------//
-var randomArray = ["Apprendre par coeur le dictionnaire", "Trier par taille toutes les vis de la boîte à outils","Lancer un faux débat sur Twitter", "Supprimer les mails inutiles","Tester tous les stylos de la maison","Pousser mémé dans les orties","Assembler toutes les paires de chaussettes", "Me faire cuire un oeuf"]
-
-function random() {
-    var min = 0
-    var max = 7
-    var random = Math.floor(Math.random() * (max - min + 1) + min)
-
-    return randomArray[random]
-}
-
-// -----------Fonction affichage des tâches aléatoires -------------//
-
-var randomAction = random()
-
-function displayRandomTask(onlick) {
-    var input = document.getElementById("randomBtn").value
-    var randomTask = {
-        value: random(),
-        status: "To do",
+            </div>
+            `
+        })
     }
-    tasks.push(randomTask)
-    displayList()
-}
-
-// -----------Fonction filtrer les tâches -------------//
-
-function taskFilter() {
-
     
+    // -----------Fonction remove -------------//
+    
+    function deleteLine(onClick) {
+        tasks.splice(onClick, 1)
+        displayList()
+    }
+    
+    
+    // -----------Fonction tâches aléatoires -------------//
+    var randomArray = ["Apprendre par coeur le dictionnaire", "Trier par taille toutes les vis de la boîte à outils","Lancer un faux débat sur Twitter", "Supprimer les mails inutiles","Tester tous les stylos de la maison","Pousser mémé dans les orties","Assembler toutes les paires de chaussettes", "Me faire cuire un oeuf"]
+    
+    function random() {
+        var min = 0
+        var max = 7
+        var random = Math.floor(Math.random() * (max - min + 1) + min)
+        
+        return randomArray[random]
+    }
+    
+    // -----------Fonction affichage des tâches aléatoires -------------//
+    
+    var randomAction = random()
+    
+    function displayRandomTask(onlick) {
+        var input = document.getElementById("randomBtn").value
+        var randomTask = {
+            value: random(),
+            status: "To do",
+        }
+        tasks.push(randomTask)
+        displayList()
+    }
+    
+    // ----------Fonction filter ---------------- // 
+
+    function filterStatus() {
+        var checkboxes = document.getElementById("checkboxFilter")
+        var status = {
+           checkbox
+        }
+        
+        checkboxStatus.push(task)
+    }
+    // -----------Fonction filtrer les tâches -------------//
+
+function filterStatus() {
+
+
 }
   
 
