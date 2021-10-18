@@ -1,26 +1,25 @@
+var input = document.getElementById("name")
 var list = document.getElementById("list")
 var tasks = []
 var checkboxStatus = []
 
 // ----------Fonction nouvelle tâche---------------- // 
-
 function onTaskSubmit()  {
-    var input = document.getElementById("name")
     var task = {
         value: input.value,
         status: "To do",
     }
     tasks.push(task)
+
     displayList(tasks)
-    input.value = ``;
+    input.value = ``
 }   
 
-// ----------Fonction edit value ---------------- // 
+// ---------- Modifier ---------------- // 
 function addForm(index) {
      var form = document.getElementById(`taskTitle${index}`)
      console.log("addform", form)
      form.innerHTML = ``
-
      form.innerHTML = form.innerHTML + `
         <form onsubmit="sendForm(${index}); return false;">
             <input id="inputTitle${index}" class="editFormInput" type="text" required >
@@ -37,61 +36,56 @@ function sendForm(index) {
 }
 
 // ---------- Fonction Display ---------------- // 
-
-function displayList(array) {
+function displayList() {
     list.innerHTML = ``
     var options = ["To do", "Doing", "Done"]
     
-    array.forEach(function(task, index) {
-    
-        var optionsElements = options.map(function(option) {
+    tasks.forEach(function(task, index) {
+        
+    var statusClass = getStatusClass(task.status)
+    var optionsElements = options.map(function(option) {
             if (task.status === option) {
-                return `<option class="statusColor" value="${option}" selected>${option}</option>`
+                return `<option value="${option}" selected>${option}</option>`
             }
-
-            return `<option class="statusColor" value="${option}">${option}</option>`
-
+            return `<option value="${option}">${option}</option>`
         }) 
         
         list.innerHTML = list.innerHTML + `
-        
             <div class="line">           
-            
                 <div class="statusSticker">
                     <img src="img/logo_Uncheck.png" alt="">
-                    <select class="statusMenu" id="statusMenu" onchange="editStatus(event, ${index})">
+                    <select class="statusMenu ${statusClass}" id="statusMenu" onchange="editStatus(event, ${index})">
                         ${optionsElements}
                     </select>
                 </div>
-                
                 <div class="list" id="taskTitle${index}">   
-                    <p>${task.value} </p>
+                    <p>${task.value}</p>
                 </div>    
-                
                 <div class="lineButtons">
-
                     <button id="editValue" onclick="addForm(${index})"><img src="img/logo_pencil.svg">Edit</button>
-
-                    <button onClick="deleteLine(${index})"><img src="img/logo_Delete-01.svg">Delete</button>
-                    
+                    <button onClick="deleteLine(${index})"><img src="img/logo_Delete-01.svg">Delete</button>  
                 </div>
-
-            </div>
             </div>
             `
         })
 }
     
 // -----------Fonction remove -------------//
-
 function deleteLine(onClick) {
     tasks.splice(onClick, 1)
+
     displayList(tasks)
 }
 
-
 // -----------Fonction tâches aléatoires -------------//
-var randomArray = ["Apprendre par coeur le dictionnaire", "Trier par taille toutes les vis de la boîte à outils","Lancer un faux débat sur Twitter", "Supprimer les mails inutiles","Tester tous les stylos de la maison","Pousser mémé dans les orties","Assembler toutes les paires de chaussettes", "Me faire cuire un oeuf"]
+var randomArray = ["Apprendre par coeur le dictionnaire", 
+                    "Trier par taille toutes les vis de la boîte à outils",
+                    "Lancer un faux débat sur Twitter", 
+                    "Supprimer les mails inutiles",
+                    "Tester tous les stylos de la maison",
+                    "Pousser mémé dans les orties",
+                    "Assembler toutes les paires de chaussettes",
+                    "Me faire cuire un oeuf"]
 
 function random() {
     var min = 0
@@ -102,21 +96,20 @@ function random() {
 }
 
 // -----------Fonction affichage des tâches aléatoires -------------//
-
 var randomAction = random()
 
-function displayRandomTask(onlick) {
+function displayRandomTask() {
     var input = document.getElementById("randomBtn").value
     var randomTask = {
         value: random(),
         status: "To do",
     }
     tasks.push(randomTask)
+
     displayList(tasks)
 }
 
 // ----------Fonction edit status ---------------- // 
-
 function editStatus(event, index,) {
     console.log("//////////////////////////////////")
     //event variable fourni par evenement "onchange"
@@ -133,28 +126,26 @@ function editStatus(event, index,) {
     displayList(tasks)
 }
 
+function getStatusClass(status) {
+    if (status === "To do") {
+        return "todoColor"
+    } else if (status === "Doing") {
+        return "doingColor"
+    } else if (status === "Done") {
+        return "doneColor"
+    }
+}
+
 // ----------Fonction filter ---------------- // 
 function enter(elem){
     elem.style.backgroundColor = '#FF0000';
 }
 
-// ----------Fonction filter ---------------- // 
-
-// function filterStatus() {
-//     var checkboxes = document.getElementById("checkboxFilter")
-//     var status = {
-//         checkbox
-//     }
-    
-//     checkboxStatus.push(task)
-// }
 // -----------Fonction filtrer les tâches -------------//
-
-function filterStatus(status) {
-    
-    
-    var filterTask = tasks.filter(function(task){
-        return task.status === status
+function filter(status) {  
+    var filteredTasks = tasks.filter(function(task) {
+        return task.status === status 
     })
-    displayList(filterTask)
+
+    displayList(filteredTasks)
 }
