@@ -53,7 +53,7 @@ function displayList() {
         list.innerHTML = list.innerHTML + `
             <div class="line">           
                 <div class="statusSticker">
-                    <img src="img/logo_Uncheck.png" alt="">
+                    <img src="img/logo_${statusClass}.png" alt="">
                     <select class="statusMenu ${statusClass}" id="statusMenu" onchange="editStatus(event, ${index})">
                         ${optionsElements}
                     </select>
@@ -126,6 +126,7 @@ function editStatus(event, index,) {
     displayList(tasks)
 }
 
+// ----------Fonction couleur status ---------------- // 
 function getStatusClass(status) {
     if (status === "To do") {
         return "todoColor"
@@ -135,6 +136,8 @@ function getStatusClass(status) {
         return "doneColor"
     }
 }
+
+
 
 // ----------Fonction filter ---------------- // 
 function enter(elem){
