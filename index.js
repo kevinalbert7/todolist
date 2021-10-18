@@ -141,10 +141,9 @@ function enter(elem){
     elem.style.backgroundColor = '#FF0000';
 }
 
-// -----------Fonction filtrer les tâches -------------//
-function filter(status) {  
-    var filteredTasks = tasks.filter(function(task) {
-        return task.status === status 
+function filterStatus(status) {
+    var filterTask = tasks.filter(function(task) {
+        return task.status === status
     })
 
     displayList(filteredTasks)
