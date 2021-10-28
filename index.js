@@ -66,8 +66,8 @@ function displayList(array) {
                 
                 <div class="list" id="taskTitle${index}">   
                     <p>${task.value} </p>
-                </div>    
-                
+                </div>  
+
                 <div class="lineButtons">
 
                     <button id="editValue" onclick="addForm(${index})"><img src="img/logo_pencil.svg">Edit</button>
@@ -139,7 +139,6 @@ function enter(elem){
 }
 
 function filterStatus(status) {
-    
     
     var filterTask = tasks.filter(function(task){
         return task.status === status
