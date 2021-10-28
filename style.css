@@ -135,18 +135,17 @@ label {
     display: flex;
     flex-direction: column;
     margin-left: 20px;
+    padding: 10px 0px;
     border: 5px solid #203A6C;
     background-color: whitesmoke;
     border-radius: 20px 20px 20px 20px;
 }
 
 .line {
-    height: 30px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px;
-    margin: 5px 10px;
+    margin: 5px 15px;
     border-radius: 20px 20px 20px 20px;
 }
 
@@ -175,31 +174,22 @@ label {
 
 .statusSticker img {
     height: 20px;
-    padding-bottom: 4px;
+    margin-right: 5px;
 }
 
 .statusMenu {
     border-style: none;
     border-radius: 10px;
     padding: 5px 10px;
-    background-color: #E87479;
 }
 
-.statusSticker .DoingColor {
-    background-color: #FFD977;
-}
-
-.statusSticker .DoneColor {
-    background-color: #9CC8CB;
-}
 
     /* Boutons*/
 
 .lineButtons { 
     display: flex;
-    justify-content: flex-start;
-    margin-top: 5px;
-    
+    align-items: flex-end;
+    margin-top: 15px;
 }
 
 .lineButtons button {
